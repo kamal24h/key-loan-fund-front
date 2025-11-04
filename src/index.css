@@ -1,0 +1,142 @@
+/**
+ * =====================================
+ *    PRIVATE FUND MANAGEMENT SYSTEM
+ * =====================================
+ * 
+ * Project: Fund Manager Pro
+ * Type: Enterprise Financial Platform
+ * 
+ * DESIGN PHILOSOPHY
+ * -----------------
+ * Core Principle: Trust through clarity and precision
+ * Design Style: Professional Financial (Clean, Data-Dense, Trustworthy)
+ * Emotion Goal: Confidence, control, and institutional-grade reliability
+ * 
+ * COLOR SYSTEM (HSL FORMAT)
+ * -------------
+ * Primary: 222 47% 11% - Deep navy for authority and trust
+ * Secondary: 210 40% 96% - Soft blue-gray for backgrounds
+ * Accent: 217 91% 60% - Vibrant blue for CTAs and highlights
+ * Success: 142 76% 36% - Forest green for positive metrics
+ * Warning: 38 92% 50% - Amber for alerts
+ * Danger: 0 84% 60% - Red for risks and losses
+ * 
+ * TYPOGRAPHY
+ * ----------
+ * Display: Inter/System - Clean headers and large numbers
+ * Body: Inter/System - Readable data tables and content
+ * Monospace: For financial figures and codes
+ * 
+ * INTERACTIONS
+ * ------------
+ * Transitions: 200ms for responsiveness
+ * Hover States: Subtle elevation and color shifts
+ * Data Updates: Smooth number transitions
+ * Loading: Professional skeleton states
+ * ====================================
+ * Never break the original structure, must use HSL for colors
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 271 91% 65%;
+    --chart-5: 0 84% 60%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 222 47% 11%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 220 39% 18%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 39% 18%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 11% 65%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 28% 24%;
+    --input: 215 28% 24%;
+    --ring: 217 91% 60%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 142 76% 45%;
+    --chart-3: 38 92% 60%;
+    --chart-4: 271 91% 70%;
+    --chart-5: 0 84% 65%;
+    --sidebar-background: 220 39% 18%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 28% 24%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 28% 24%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Financial number formatting */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+  
+  /* Smooth number transitions */
+  .transition-number {
+    @apply transition-all duration-300 ease-in-out tabular-nums;
+  }
+}
